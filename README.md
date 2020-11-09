@@ -24,7 +24,9 @@ LeetCodePro - Kotlin
 Easy 
 ===
 
-- [算法 Notes ｜LeetCode 349. 两个数组的交集](https://juejin.im/post/6892626856354021384)
+|  题号   | 题目  | 题解  | 文章 |
+|  ----  | ----  | ----  | ---- |
+| 349  | [两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/) | [Question 349](https://github.com/HLQ-Struggle/LeetCodePro/blob/master/src/com/hlq/leetcode/array/Question349.kt) | [算法 Notes ｜LeetCode 349. 两个数组的交集](https://juejin.im/post/6892626856354021384) | 
 
 How to find me?
 ===
