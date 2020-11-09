@@ -1,4 +1,4 @@
-package com.hlq.leetcode
+package com.hlq.leetcode.array
 
 /**
  * @author HLQ_Struggle
