@@ -5,7 +5,7 @@ package com.hlq.leetcode.array
  * @date 2020/11/08
  * @desc LeetCode 349. 两个数组的交集 https://leetcode-cn.com/problems/intersection-of-two-arrays/
  */
-fun main(args: Array<String>) {
+fun main() {
     val nums1 = IntArray(4)
     nums1[0] = 1
     nums1[1] = 2
@@ -13,8 +13,8 @@ fun main(args: Array<String>) {
     nums1[3] = 1
 
     val nums2 = IntArray(2)
-    nums2[0] = 2
-    nums2[1] = 2
+    nums2[0] = 7
+    nums2[1] = 9
 
     // Set + contains
     intersection(nums1, nums2)
