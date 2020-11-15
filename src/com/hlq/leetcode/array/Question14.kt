@@ -1,6 +1,6 @@
 package com.hlq.leetcode.array
 
-import kotlin.test.currentStackTrace
+import java.util.*
 
 /**
  * @author HLQ_Struggle
@@ -13,12 +13,38 @@ fun main() {
     val strsNull = arrayOf("dog", "racecar", "car")
 
     // 暴力解法 1
-    println("----> ${longestCommonPrefix(strs)}")
-    println("----> ${longestCommonPrefix(strs1)}")
-    println("----> ${longestCommonPrefix(strsNull)}")
+//    println("----> ${longestCommonPrefix(strs)}")
+//    println("----> ${longestCommonPrefix(strs1)}")
+//    println("----> ${longestCommonPrefix(strsNull)}")
+//
+//    // 暴力解法 2
+//    println("----> ${longestCommonPrefix2(strs)}")
 
-    // 暴力解法 2
-    println("----> ${longestCommonPrefix2(strs)}")
+    // 排序法
+    println("----> ${longestCommonPrefix3(strs)}")
+}
+
+/**
+ * 排序法
+ */
+fun longestCommonPrefix3(strs: Array<String>): String {
+    var resultStr = ""
+    if (strs.isEmpty()) {
+        return resultStr
+    }
+    if (strs.size == 1) {
+        return strs[0]
+    }
+    var len = strs.size
+    Arrays.sort(strs)
+    for (i in strs[0].indices){
+        if(strs[len-1].toCharArray()[i] == strs[0].toCharArray()[i]){
+            resultStr += strs[0].toCharArray()[i]
+        }else{
+            break
+        }
+    }
+    return resultStr
 }
 
 /**
