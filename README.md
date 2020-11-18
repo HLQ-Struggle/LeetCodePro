@@ -26,7 +26,9 @@ Easy
 
 |  题号   | 题目  | 题解  | 文章 |
 |  ----  | ----  | ----  | ---- |
+| 14  | [最长公共前缀](https://leetcode-cn.com/problems/longest-common-prefix/) | [Question 14](https://github.com/HLQ-Struggle/LeetCodePro/blob/master/src/com/hlq/leetcode/array/Question14.kt) | [算法 Notes｜LeetCode 14. 最长公共前缀 - easy](https://juejin.im/post/6895273901710901261) | 
 | 349  | [两个数组的交集](https://leetcode-cn.com/problems/intersection-of-two-arrays/) | [Question 349](https://github.com/HLQ-Struggle/LeetCodePro/blob/master/src/com/hlq/leetcode/array/Question349.kt) | [算法 Notes ｜LeetCode 349. 两个数组的交集](https://juejin.im/post/6892626856354021384) | 
+
 
 How to find me?
 ===
