@@ -6,10 +6,7 @@ package com.hlq.leetcode.array
  * @desc LeetCode 1. 两数之和 https://leetcode-cn.com/problems/two-sum/
  */
 fun main() {
-    val nums = IntArray(3)
-    nums[0] = 3
-    nums[1] = 2
-    nums[2] = 4
+    val nums = intArrayOf(3, 2, 4)
 
     val target = 6
 
@@ -19,6 +16,12 @@ fun main() {
     // 优化
     twoSum2(nums, target)
     twoSum3(nums, target)
+
+    // 学习 LeetCode 执行用时范例
+    twoSum4(nums, target)
+
+    // 学习 LeetCode 执行消耗内存范例
+    twoSum5(nums, target)
 }
 
 /**
@@ -95,4 +98,44 @@ fun twoSum3(nums: IntArray, target: Int): IntArray {
         j = i + 1
     }
     return intArrayOf(0, 0)
+}
+
+/**
+ * 学习 LeetCode 执行用时最短事例
+ */
+fun twoSum4(nums: IntArray, target: Int): IntArray {
+    if (nums.isEmpty()) {
+        return intArrayOf(0, 0)
+    }
+    for (i in nums.indices) {
+        for (j in 0..i) {
+            if (i == j) {
+                continue
+            }
+            val a = nums[i];
+            val b = nums[j];
+            if (a + b == target) {
+                return intArrayOf(j, i)
+            }
+        }
+    }
+    return intArrayOf(0, 0)
+}
+
+/**
+ * 学习 LeetCode 执行消耗内存范例
+ */
+fun twoSum5(nums: IntArray, target: Int): IntArray {
+    if (nums.isEmpty()) {
+        return intArrayOf(0, 0)
+    }
+    val map: MutableMap<Int, Int> = HashMap()
+    for (i in nums.indices) {
+        val complement = target - nums[i]
+        if (map.containsKey(complement)) {
+            return intArrayOf(map[complement]!!, i)
+        }
+        map[nums[i]] = i
+    }
+    throw Exception()
 }
